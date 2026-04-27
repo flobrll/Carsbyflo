@@ -3,66 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Florian Barall - Automotive Photography Portfolio</title>
+    <title>Florian Barall - Automotive Photographer</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
         }
         header {
-            background: #333;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-        }
-        .portfolio {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 10px;
-            padding: 20px;
-        }
-        .portfolio img {
+            position: fixed;
+            top: 0;
             width: 100%;
-            height: auto;
+            background: rgba(0,0,0,0.95);
+            padding: 15px 0;
+            text-align: center;
+            border-bottom: 3px solid white;
+            z-index: 1000;
+        }
+        header nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            border: 2px solid white;
+            padding: 8px 15px;
             border-radius: 5px;
+            display: inline-block;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        header nav a:hover {
+            background: white;
+            color: black;
+        }
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 60px;
+            border: 3px solid white;
+            margin: 60px 20px 20px 20px;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.5em;
+        }
+        section {
+            padding: 40px;
+            border: 3px solid white;
+            margin: 20px;
+            margin-top: 80px;
+        }
+        section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid white;
+            padding-bottom: 10px;
+        }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .portfolio-grid img {
+            width: 100%;
+            border: 2px solid white;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .portfolio-grid img:hover {
+            transform: scale(1.05);
+        }
+        .contact-info {
+            margin-top: 20px;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        .contact-info a {
+            color: #00d4ff;
+            text-decoration: none;
+            border-bottom: 1px solid #00d4ff;
+        }
+        .contact-info a:hover {
+            color: white;
         }
         footer {
-            text-align: center;
             padding: 20px;
-            background: #333;
-            color: white;
-        }
-        .contact {
+            text-align: center;
+            border-top: 3px solid white;
             margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            header nav a {
+                margin: 5px;
+                font-size: 0.9em;
+                padding: 5px 10px;
+            }
+            .hero h1 {
+                font-size: 2em;
+            }
+            .hero p {
+                font-size: 1.2em;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Florian Barall</h1>
-        <p>Automotive Photographer</p>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
-    <main>
-        <div class="portfolio">
-            <img src="https://via.placeholder.com/300x200.png?text=Car+Image+1" alt="Car Image 1">
-            <img src="https://via.placeholder.com/300x200.png?text=Car+Image+2" alt="Car Image 2">
-            <img src="https://via.placeholder.com/300x200.png?text=Car+Image+3" alt="Car Image 3">
-            <img src="https://via.placeholder.com/300x200.png?text=Car+Image+4" alt="Car Image 4">
-            <img src="https://via.placeholder.com/300x200.png?text=Car+Image+5" alt="Car Image 5">
-            <img src="https://via.placeholder.com/300x200.png?text=Car+Image+6" alt="Car Image 6">
+
+    <section class="hero" id="home">
+        <h1>Florian Barall</h1>
+        <p>Rising Automotive Photographer</p>
+    </section>
+
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <p>Explore my latest automotive photography work:</p>
+        <div class="portfolio-grid">
+            <img src="IMG_0552.jpeg" alt="Car 1">
+            <img src="IMG_7159.jpeg" alt="Car 2">
+            <img src="IMG_8372.jpeg" alt="Car 3">
+            <img src="IMG_8376.jpeg" alt="Car 4">
+            <img src="IMG_8394.jpeg" alt="Car 5">
+            <img src="IMG_8401.jpeg" alt="Car 6">
         </div>
-        <div class="contact">
-            <h2>Contact Me</h2>
-            <p>Instagram: <a href="https://instagram.com/Carsbyflo">@Carsbyflo</a></p>
-            <p>TikTok: <a href="https://tiktok.com/@Carsbyflo">@Carsbyflo</a></p>
-            <p>Phone: <a href="tel:+4915734242016">+49 1573 4242016</a></p>
+    </section>
+
+    <section id="about">
+        <h2>About</h2>
+        <p>Welcome to my portfolio as a rising automotive photographer. I specialize in capturing the beauty, power, and elegance of automotive design through stunning photography.</p>
+        <p style="margin-top: 15px;">Based in Germany, I focus on creating professional automotive imagery that showcases the finest details and characteristics of every vehicle.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-info">
+            <p>📱 <strong>Phone:</strong> <a href="tel:+4915734242016">+49 1573 4242016</a></p>
+            <p>📷 <strong>Instagram:</strong> <a href="https://instagram.com/Carsbyflo" target="_blank">@Carsbyflo</a></p>
+            <p>🎵 <strong>TikTok:</strong> <a href="https://tiktok.com/@Carsbyflo" target="_blank">@Carsbyflo</a></p>
         </div>
-    </main>
+    </section>
+
     <footer>
-        <p>&copy; 2026 Florian Barall</p>
+        <p>&copy; 2026 Florian Barall - Automotive Photography</p>
     </footer>
 </body>
 </html>
